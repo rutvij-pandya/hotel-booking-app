@@ -1,0 +1,77 @@
+1:
+  name: "Comfort Inn Pomona"
+  minimum_stay: 32
+  cover_picture: "https://dhnbtbklvnmwt.cloudfront.net/system/uploads/hotels/hotel/cover_photo/29/comfort-inn-pomona1_orig.jpgaa23b2b5-b2b2-4cf8-a644-d6ece5c06be4.jpg"
+  room_types:
+    - name: "type1"
+      occupancy_limit: 2
+      quantity: 2
+      base_rate: 13200
+      rates_schedule:
+        - start_date: "2018-07-07"
+          end_date: "2018-07-08"
+          rate: 14000
+        - start_date: "2018-07-14"
+          end_date: "2018-07-15"
+          rate: 14000
+    - name: "type2"
+      occupancy_limit: 3
+      quantity: 1
+      base_rate: 14800
+2:
+  name: "Arroyo Vista Inn"  
+  minimum_stay: 30
+  cover_picture: "https://dhnbtbklvnmwt.cloudfront.net/system/uploads/hotels/hotel/cover_photo/30/arroyo_gallery_19.jpga7aa27e8-8ade-49f9-a8e3-02614d401883.jpg"
+  room_types:
+    - name: "type1"
+      occupancy_limit: 2
+      quantity: 1
+      base_rate: 11100
+    - name: "type2"
+      occupancy_limit: 3
+      quantity: 2
+      base_rate: 13500
+3:
+  name: "Plaza la Reina"
+  minimum_stay: 30
+  cover_picture: "https://dhnbtbklvnmwt.cloudfront.net/system/uploads/hotels/hotel/cover_photo/31/Junior-Suite-bedroom-1024x768.jpg35d039c1-92e3-4f92-bd42-dede3dbd5633.jpg"
+  room_types:
+    - name: "type1"
+      occupancy_limit: 2
+      quantity: 1
+      base_rate: 13200
+      rates_schedule:
+        - start_date: "2018-07-07"
+          end_date: "2018-07-08"
+          rate: 14000
+    - name: "type2"
+      occupancy_limit: 3
+      quantity: 1
+      base_rate: 13000
+4:
+  name: "Hampton Inn & Suites Thousand Oaks"
+  minimum_stay: 28
+  cover_picture: "https://dhnbtbklvnmwt.cloudfront.net/system/uploads/hotels/hotel/cover_photo/28/hampton-inn-suites-thousand-oaks1_orig.jpg9c5dcf11-820f-46a3-805f-49d00adf8d57.jpg"
+  room_types:
+    - name: "type1"
+      occupancy_limit: 2
+      quantity: 2
+      base_rate: 15900
+    - name: "type2"
+      occupancy_limit: 3
+      quantity: 2
+      base_rate: 18300
+5: 
+  name: "Candlewood Suites LAX Hawthorne"
+  minimum_stay: 30
+  cover_picture: "https://dhnbtbklvnmwt.cloudfront.net/system/uploads/hotels/hotel/cover_photo/25/candlewood-suites-lax-hawthorne1_orig.jpg448975c2-fceb-4840-9cfe-d3f65077ed3e.jpg"
+  room_types:
+    - name: "type1"
+      occupancy_limit: 2
+      quantity: 2
+      base_rate: 14400
+    - name: "type2"
+      occupancy_limit: 3
+      quantity: 1
+      base_rate: 15200
+
