@@ -1,0 +1,13 @@
+<div class="row card-panel grey lighten-5">
+  <div class="col s6 m2 l2 thumbnail">    
+    <img src="{{hotel.cover_picture}}" alt="" />
+  </div>
+  <div class="col s12 m4 l8">
+    <h5>{{hotel.name}}</h5>
+    <b>Minimum Stay</b>: <span>{{hotel.minimum_stay}} nights</span><br />
+    <b>Availability</b>: <span>{{hotel.available}}</span>
+  </div>  
+  <div class="col s12 m2 l1">
+    <a class="btn btn-primary" [routerLink]="['/hotels', hotel.id, 'booking']"> Book </a>
+  </div>
+</div>

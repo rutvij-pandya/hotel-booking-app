@@ -1,0 +1,11 @@
+<!-- HotelListHeaderComponent that lets us create new hotel -->
+<app-hotel-list-header></app-hotel-list-header>
+
+<!-- display hotels list -->
+<div *ngFor="let hotel of hotels">
+  <app-hotel-list-item [hotel]="hotel" ></app-hotel-list-item>
+</div>
+
+<p style="text-align: center;"> <b> [To be done] << < Pagination > >> </b></p>
+<!-- HotelListFooterComponent that displays statistics -->
+<!-- <app-hotel-list-footer></app-hotel-list-footer> -->
