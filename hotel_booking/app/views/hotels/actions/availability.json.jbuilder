@@ -1,6 +1,6 @@
-json.hotel do 
+# json.hotel do 
   json.partial! '/hotels/hotel', hotel: @hotel
-end
+# end
 
 available_room_types = room_availability(@hotel, @hotels_availability[@hotel.id])
 

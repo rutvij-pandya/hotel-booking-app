@@ -7,7 +7,7 @@ module Hotels
 
   include HotelHelpers
 
-  # GET  /hotels/:id/:room_type_id/availability?check_in_date= &check_out_date=
+  # GET  /hotels/:id/availability?room_type_id= &check_in_date= &check_out_date=
   def availability
     @hotels_availability = 
       Queries::RoomBookingQuery.new(booking_query_params).execute.index_by(&:id)
