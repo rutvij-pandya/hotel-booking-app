@@ -3,9 +3,23 @@
 
 <!-- display hotels list -->
 <div *ngFor="let hotel of hotels">
-  <app-hotel-list-item [hotel]="hotel" ></app-hotel-list-item>
+  <!-- <app-hotel-list-item [hotel]="hotel" ></app-hotel-list-item> -->
+  <div class="row card-panel grey lighten-5">
+    <div class="col s6 m2 l2 thumbnail">    
+      <img src="{{hotel.cover_picture}}" alt="" />
+    </div>
+    <div class="col s12 m4 l8">
+      <h5>{{hotel.name}}</h5>
+      <b>Minimum Stay</b>: <span>{{hotel.minimum_stay}} nights</span><br />
+    </div>  
+    <div class="col s12 m2 l1">
+      <button mat-button class="mat-raised-button mat-accent mat-primary"
+              (click)="checkAvailability(hotel)">
+          Book
+      </button>
+    </div>
+  </div>
+
 </div>
 
 <p style="text-align: center;"> <b> [To be done] << < Pagination > >> </b></p>
-<!-- HotelListFooterComponent that displays statistics -->
-<!-- <app-hotel-list-footer></app-hotel-list-footer> -->

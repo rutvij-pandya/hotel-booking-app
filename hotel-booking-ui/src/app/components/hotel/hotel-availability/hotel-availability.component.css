@@ -1,0 +1,19 @@
+.mat-form-field {
+  display: block;
+}
+
+.hotelDatePicker {
+  border: 0px !important;
+  margin: 0px !important;
+  height: auto !important;
+}
+
+.rateSection {
+  margin: 15px 0px;
+}
+
+.notFound {
+  font-weight: 400;
+  font-style: italic;
+  color: #ff0000;
+}

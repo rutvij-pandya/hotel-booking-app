@@ -12,9 +12,6 @@ export class HotelDataService {
   // automatic incrementing of ids
   lastId: number = 0;
 
-  // Placeholder for hotels
-  // hotels: Hotel[] = [];
-
   constructor(private api: HotelApiService) { }
 
   // centralize the business logic in a service.
@@ -24,9 +21,13 @@ export class HotelDataService {
     return this.api.getAllHotels();
   }
 
-  // Simulate GET /hotels/comfort-inn-pomona/1133213962/availability.json?check_in_date=2018-07-10&check_out_date=2018-08-09
-  checkAvailability(hotelSlug: string, roomTypeId: number): Observable<Response> {
-    return this.api.checkAvailability(hotelSlug, roomTypeId);
+  // Simulate GET /hotels/comfort-inn-pomona/availability.json?room_type_id=1133213962&check_in_date=2018-07-10&check_out_date=2018-08-09
+  checkAvailability(hotelSlug: string, roomTypeId: number, checkInDate: string, checkOutDate: string): Observable<Hotel> {        
+    return this.api.checkAvailability(hotelSlug, roomTypeId, checkInDate, checkOutDate);
   }
 
+  // Simulate POST /bookings.json
+  createBooking(roomTyprId: number, checkInDate: string, checkOutDate: string): Observable<any> {
+    return this.api.createBooking(roomTyprId, checkInDate, checkOutDate);
+  }
 }

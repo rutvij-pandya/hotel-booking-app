@@ -1,3 +1,58 @@
-<p>
-  hotel-availability works!
-</p>
+<h2 mat-dialog-title>{{name}}</h2>
+<p><b>Minimum Stay : </b> <span>{{minimumStay}} nights</span> </p>
+<hr />
+<mat-dialog-content *ngIf="hotel" [formGroup]="hotelForm">  
+    
+    <!-- Field - Check In date -->
+    <mat-form-field>
+        <input matInput placeholder="Check In" 
+                [matDatepicker]="checkInDatepicker" 
+                formControlName="checkInDate" 
+                class="hotelDatePicker" 
+                [(ngModel)]='hotel.availability.check_in_date' 
+                [min]="minCheckInDate" 
+                (dateChange)="changeDuration($event, 'checkIn')">
+        <mat-datepicker-toggle matSuffix [for]="checkInDatepicker"> </mat-datepicker-toggle>
+        <mat-datepicker #checkInDatepicker></mat-datepicker>
+    </mat-form-field>
+    <!-- Field - Check Out date -->
+    <mat-form-field>
+        <input matInput placeholder="Check Out" 
+                [matDatepicker]="checkOutDatepicker" 
+                formControlName="checkOutDate" 
+                class="hotelDatePicker" 
+                [(ngModel)]='hotel.availability.check_out_date'                 
+                (dateChange)="changeDuration($event, 'checkOut')">
+        <mat-datepicker-toggle matSuffix [for]="checkOutDatepicker"> </mat-datepicker-toggle>
+        <mat-datepicker #checkOutDatepicker></mat-datepicker>
+    </mat-form-field>
+    <!-- Field - Room Type -->
+    <mat-form-field>
+        <mat-select placeholder="Select Room Type" formControlName="selectedRoomType" [(ngModel)]="selectedRoom.id">
+            <mat-option *ngFor="let roomType of hotel.room_types" [value]="roomType.id"
+                (onSelectionChange)="changeRoomType($event, roomType)">
+              {{roomType.name}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <!-- Show Room Rate for selected room -->
+    <div class="rateSection" *ngIf="selectedRoom">
+        <div><b>Room rate : {{selectedRoom.rate}} per month</b></div>
+        <div *ngIf="!selectedRoom.available">
+            <span class="notFound">Sorry, selected room is not available</span>
+        </div>
+    </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+
+    <button class="mat-raised-button" (click)="close()">
+        Close
+    </button>
+
+    <button class="mat-raised-button mat-primary" (click)="save()">
+        Book
+    </button>
+
+</mat-dialog-actions>
