@@ -68,7 +68,7 @@ export class HotelApiService {
     let data = { "room_type_id": roomTyprId, "check_in_date": checkInDate, "check_out_date": checkOutDate }
 
     return this.http
-      .post(API_URL + '/bookings.json', data, this.baseService.options)
+      .post(API_URL + '/bookings.json', data)
       .map(response => {
         return response.json();
       })
