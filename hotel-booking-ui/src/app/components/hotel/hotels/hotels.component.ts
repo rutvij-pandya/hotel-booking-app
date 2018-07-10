@@ -59,6 +59,7 @@ export class HotelsComponent implements OnInit {
           .subscribe(
             booking => {
               console.log("Booking confirmation:", booking)
+              alert("Booking successful!");
             }
           );
       }
