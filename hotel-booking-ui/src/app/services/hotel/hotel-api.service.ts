@@ -66,10 +66,9 @@ export class HotelApiService {
   // API: POST /bookings.json
   public createBooking(roomTyprId: number, checkInDate: string, checkOutDate: string): Observable<any> {
     let data = { "room_type_id": roomTyprId, "check_in_date": checkInDate, "check_out_date": checkOutDate }
-    let body = JSON.stringify(data);
 
     return this.http
-      .post(API_URL + '/bookings.json', body, this.baseService.options)
+      .post(API_URL + '/bookings.json', data, this.baseService.options)
       .map(response => {
         return response.json();
       })
