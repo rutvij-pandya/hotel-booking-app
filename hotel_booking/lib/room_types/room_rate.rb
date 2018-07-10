@@ -39,7 +39,7 @@ class RoomTypes::RoomRate
   end
 
   def duration
-    (check_in_date..check_out_date).count
+    (Date.parse(check_in_date)..Date.parse(check_out_date)).count
   end
   
 end
